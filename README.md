@@ -10,12 +10,6 @@ SimpleViewer is a lightweight, minimalist image viewer application built with Py
 - **Copy to Clipboard**: Quickly copy images to your clipboard for easy pasting and sharing.
 - **Contact Info**: Access contact information and links to related resources directly from the application.
 
-## Contact Info: 
-Access contact information and links to related resources directly from the application.
-
-## How to Use
-To use SimpleViewer, simply clone the repository, navigate to the directory containing fotoApp.py, and run the script using Python.
-
 ## Contributions
 Feedback and contributions are always welcome! Feel free to open an issue or submit a pull request if you have any suggestions or improvements.
 
