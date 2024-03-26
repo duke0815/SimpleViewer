@@ -1,3 +1,4 @@
+![image](https://github.com/duke0815/SimpleViewer/assets/117548530/4bf25cf6-fc8f-4dd5-8b61-8bf1d2038825)
 # SimpleViewer
 SimpleViewer is a lightweight, minimalist image viewer application built with Python. It's designed to provide a straightforward and intuitive user experience for viewing images.
 
@@ -23,14 +24,15 @@ SimpleViewer offers two straightforward methods to launch the application:
 
 **Using the Python Script:**
 
-1. Clone the repository to your local machine.
-2. Navigate to the directory containing the SimpleViewer.py file.
-3. Execute the script by running python SimpleViewer.py in your terminal or command prompt. Ensure Python is installed on your system.
+1. Clone the repository to your local machine or download the .zip-file.
+2. Execute the script by running python SimpleViewer.py in your terminal or command prompt. Ensure Python is installed on your system.
 
 **Using the .exe File**
 
+This method is particularly convenient for users who are not familiar with running Python scripts or prefer a quick and hassle-free solution.
 For an easier experience without the need to have Python installed, you can utilize the precompiled .exe file:
 
-1. Go to the dist/SimpleViewer/ folder.
-2. Launch the application by double-clicking on SimpleViewer.exe.
-This method is particularly convenient for users who are not familiar with running Python scripts or prefer a quick and hassle-free solution.
+1. Clone the repository to your local machine or download the .zip-file.
+2. Go to the "SimpleViewer" folder.
+3. Launch the application by double-clicking on SimpleViewer.exe.
+
