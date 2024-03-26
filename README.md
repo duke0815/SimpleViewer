@@ -17,3 +17,20 @@ To use SimpleViewer, simply clone the repository, navigate to the directory cont
 
 ## Contributions
 Feedback and contributions are always welcome! Feel free to open an issue or submit a pull request if you have any suggestions or improvements.
+
+## How to Use
+SimpleViewer offers two straightforward methods to launch the application:
+
+**Using the Python Script:**
+
+1. Clone the repository to your local machine.
+2. Navigate to the directory containing the SimpleViewer.py file.
+3. Execute the script by running python SimpleViewer.py in your terminal or command prompt. Ensure Python is installed on your system.
+
+**Using the .exe File**
+
+For an easier experience without the need to have Python installed, you can utilize the precompiled .exe file:
+
+1. Go to the dist/SimpleViewer/ folder.
+2. Launch the application by double-clicking on SimpleViewer.exe.
+This method is particularly convenient for users who are not familiar with running Python scripts or prefer a quick and hassle-free solution.
