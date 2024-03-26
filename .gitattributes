@@ -1,0 +1,5 @@
+# Alle Dateien standardmäßig ignorieren
+* linguist-vendored
+
+# .py Dateien nicht ignorieren
+*.py linguist-vendored=false
