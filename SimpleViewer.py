@@ -42,6 +42,18 @@ class ImageEditor:
         self.contact_button = tk.Button(self.button_frame, text="about", command=self.show_contact_info)
         self.contact_button.pack(side=tk.LEFT)
 
+        self.filename_label = tk.Label(self.button_frame, text="")
+        self.filename_label.pack(side=tk.RIGHT)
+
+        self.status_bar = tk.Frame(master)
+        self.status_bar.pack(side=tk.BOTTOM, fill=tk.X)
+
+        self.pixel_label = tk.Label(self.status_bar, text="")
+        self.pixel_label.pack(side=tk.LEFT)
+        
+        self.filename_label = tk.Label(self.status_bar, text="")
+        self.filename_label.pack(side=tk.RIGHT)
+
         self.canvas_frame = tk.Frame(master, bg='green')
         self.canvas_frame.pack(fill=tk.BOTH, expand=True)
 
@@ -89,16 +101,27 @@ class ImageEditor:
     def load_previous_image(self, event=None):
         print("load_previous_image was called")
         print(f"file_list length: {len(self.file_list)}, current_file_index: {self.current_file_index}")
-        if self.file_list and self.current_file_index > 0:
-            self.current_file_index -= 1
+        if self.file_list:
+            self.current_file_index = (self.current_file_index - 1) % len(self.file_list)
             self.open_image(self.file_list[self.current_file_index])
+            self.filename_label.config(text=os.path.basename(self.file_list[self.current_file_index]))
+            if self.original_image is not None:
+                width, height = self.original_image.size
+                half_width, half_height = width // 2, height // 2
+                self.pixel_label.config(text=f"Pixels: {(half_width, half_height)}")
 
     def load_next_image(self, event=None):
         print("load_next_image was called")
         print(f"file_list length: {len(self.file_list)}, current_file_index: {self.current_file_index}")
-        if self.file_list and self.current_file_index < len(self.file_list) - 1:
-            self.current_file_index += 1
+        if self.file_list:
+            self.current_file_index = (self.current_file_index + 1) % len(self.file_list)
             self.open_image(self.file_list[self.current_file_index])
+            self.filename_label.config(text=os.path.basename(self.file_list[self.current_file_index]))
+            if self.original_image is not None:
+                width, height = self.original_image.size
+                half_width, half_height = width // 2, height // 2
+                self.pixel_label.config(text=f"Pixels: {(half_width, half_height)}")
+
 
     def open_link(self, event):
         webbrowser.open_new(r"https://github.com/duke0815/SimpleViewer")
@@ -129,6 +152,11 @@ class ImageEditor:
     def open_image(self, file_path=None):
         if file_path is None:
             file_path = filedialog.askopenfilename()
+            self.filename_label.config(text=os.path.basename(file_path))
+            if self.original_image is not None:
+                width, height = self.original_image.size
+                half_width, half_height = width // 2, height // 2
+                self.pixel_label.config(text=f"Pixels: {(half_width, half_height)}")
 
         if file_path:
             print(f"file_path: {file_path}")
